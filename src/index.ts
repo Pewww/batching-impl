@@ -12,14 +12,23 @@ new App({
     methods: {
       changeName() {
         const names = this.data.names;
+        const namesLeng = names.length;
 
         this.setData({
           name: names[
-            Math.floor(Math.random() * names.length)
+            Math.floor(Math.random() * namesLeng)
           ]
         });
-
-        console.log('--- 데이터가 바뀌었어요! ---');
+        this.setData({
+          name: names[
+            Math.floor(Math.random() * namesLeng)
+          ]
+        });
+        this.setData({
+          name: names[
+            Math.floor(Math.random() * namesLeng)
+          ]
+        });
 
         (() => {
           const nameEl = this.el.querySelector('#name');

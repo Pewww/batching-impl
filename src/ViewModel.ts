@@ -57,6 +57,8 @@ export default class ViewModel {
   public render() {
     // v-dom 적용 안 됨
     this.parser.parse(this);
+
+    console.log('렌더링이 완료됐어요!');
   }
 
   public subscribe(watcher: Watcher) {
@@ -74,6 +76,8 @@ export default class ViewModel {
   }
 
   public notify() {
+    console.log('데이터가 변경됐어요!');
+
     this.listeners.forEach(watcher => {
       watcher.update();
     });
