@@ -40,6 +40,8 @@ export default class Parser {
   constructor(el: HTMLElement) {
     this.$el = el;
     this.$clonedDocument = this.cloneDocument();
+    
+    this.makeElVisible();
   }
 
   public parse(viewModel: ViewModel) {
@@ -211,5 +213,10 @@ export default class Parser {
     }
 
     return clonedDocument;
+  }
+
+  private makeElVisible() {
+    // 더 좋은 방법을 고민해봐요..
+    this.$el.style.display = 'flex';
   }
 }
