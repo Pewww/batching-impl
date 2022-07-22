@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <title>Implementation of Batching</title>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+
+      #app {
+        height: 100%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      h1 {
+        font-size: 42px;
+        margin: 0;
+      }
+
+      p {
+        font-size: 20px;
+        margin: 10px 0 30px;
+        color: #aaa;
+      }
+
+      #name {
+        font-size: 28px;
+      }
+
+      button {
+        width: 159px;
+        height: 51px;
+        border: none;
+        outline: none;
+        border-radius: 8px;
+        background-color: #4067f2;
+        margin-top: 40px;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <h1>배칭 테스트</h1>
+      <p>콘솔을 확인해주세요.</p>
+      <div id="name">{{ name }}</div>
+      <button @click="changeName">이름 변경하기</button>
+    </div>
+  </body>
+</html>
