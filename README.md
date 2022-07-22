@@ -1,2 +1,3 @@
-# batch-in-mvvm
+# batching-impl
+
 Implementation of Batching
